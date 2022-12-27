@@ -1,0 +1,18 @@
+import axios from "axios"
+
+
+
+export class UserService{
+    static serverURL = ` http://localhost:9000`;
+
+    static getAllUsers(){
+        let dataURL = `${this.serverURL}/users`
+        return axios.get(dataURL);
+    }
+
+    static getUser(userId){
+        let dataURL = `${this.serverURL}/users/${userId}`;
+        return axios.get(dataURL);
+    }
+};
+

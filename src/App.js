@@ -1,24 +1,28 @@
-import logo from './logo.svg';
 import './App.css';
+import Loading from './components/Loading/Loading';
+import React from "react";
+import {Route, Routes, Navigate} from "react-router-dom";
+import NavBar from "./components/NavBar/NavBar";
+import UserList from './components/users/UserList/UserList';
+import AddUser from './components/users/AddUser/AddUser';
+import ViewUser from './components/users/ViewUser/ViewUser';
+import EditUser from './components/users/EditUser/EditUser';
 
-function App() {
+
+
+let  App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <React.Fragment>
+      <NavBar/>
+      <Routes>
+        <Route path={"/"} element= {<Navigate to={"/users/list"}/>}/>
+        <Route path={'/users/list'} element={<UserList/>}/>
+        <Route path={'/users/add'} element={<AddUser/>}/>
+        <Route path={'/users/view/:userId'} element={<ViewUser/>}/>
+        <Route path={'/users/edit/:userId'} element={<EditUser/>}/> 
+      </Routes>
+      
+    </React.Fragment>
   );
 }
 

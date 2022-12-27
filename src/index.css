@@ -1,13 +1,20 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+body{
+    background-color: #b2c4dd !important;
+}
+.formulario{
+    background-color: #b2c4dd !important;
+}
+.user-img{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.color-card{
+    background-color: rgb(59 80 151) !important;
+    
+}
+
+.card-body{
+    border-radius: 30px;
 }
