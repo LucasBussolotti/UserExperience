@@ -22,7 +22,12 @@ export class UserService{
 
     static updateUser(user, userId){
         let dataURL = `${this.serverURL}/users/${userId}`;
-        return axios.put(dataURL, user)
+        return axios.put(dataURL, user);
+    }
+
+    static deleteUser(userId){
+        let dataURL = `${this.serverURL}/users/${userId}`;
+        return axios.delete(dataURL);
     }
 };
 

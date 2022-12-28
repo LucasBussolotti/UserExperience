@@ -18,3 +18,10 @@ body{
 .card-body{
     border-radius: 30px;
 }
+
+.info{
+    color: white;
+    list-style: none;
+    align-items: center;
+    margin-top: 10px;
+}
