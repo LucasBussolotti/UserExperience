@@ -1,37 +1,60 @@
 {
-    "users":[
-        {
-            "id": "AA@#123",
-            "name": "Lucas",
-            "username": "lucas",
-            "img": "https://w7.pngwing.com/pngs/831/88/png-transparent-user-profile-computer-icons-user-interface-mystique-miscellaneous-user-interface-design-smile-thumbnail.png",
-            "email" : "lucas@example.com",
-            "password": "Aa123@#!"
-        },
-        {
-            "id": "AA@#444",
-            "name": "Mauricio",
-            "username": "mau",
-            "img": "https://w7.pngwing.com/pngs/831/88/png-transparent-user-profile-computer-icons-user-interface-mystique-miscellaneous-user-interface-design-smile-thumbnail.png",
-            "email" : "mauricio@example.com",
-            "password": "Aa123@#!"
-        }, 
-        {
-            "id": "AA@#555",
-            "name": "Natalia",
-            "username": "nati",
-            "img": "https://w7.pngwing.com/pngs/831/88/png-transparent-user-profile-computer-icons-user-interface-mystique-miscellaneous-user-interface-design-smile-thumbnail.png",
-            "email" : "Natalia@example.com",
-            "password": "Aa123@#!"
-        },
-        {
-            "id": "AAeFhjK+",
-            "name": "José luis",
-            "username": "jose",
-            "img": "https://w7.pngwing.com/pngs/831/88/png-transparent-user-profile-computer-icons-user-interface-mystique-miscellaneous-user-interface-design-smile-thumbnail.png",
-            "email" : "joseluis@example.com",
-            "password": "Aa123@#!"
-        }
-        
-    ]
+  "users": [
+    {
+      "id": "AB@#123",
+      "name": "Lucas",
+      "username": "lucas",
+      "img": "https://w7.pngwing.com/pngs/831/88/png-transparent-user-profile-computer-icons-user-interface-mystique-miscellaneous-user-interface-design-smile-thumbnail.png",
+      "email": "lucas@example.com",
+      "password": "Aa123@#!"
+    },
+    {
+      "id": "AC@#444",
+      "name": "Mauricio",
+      "username": "mau",
+      "img": "https://w7.pngwing.com/pngs/831/88/png-transparent-user-profile-computer-icons-user-interface-mystique-miscellaneous-user-interface-design-smile-thumbnail.png",
+      "email": "mauricio@example.com",
+      "password": "Aa123@#!"
+    },
+    {
+      "id": "AD@#555",
+      "name": "Natalia",
+      "username": "nati",
+      "img": "https://w7.pngwing.com/pngs/831/88/png-transparent-user-profile-computer-icons-user-interface-mystique-miscellaneous-user-interface-design-smile-thumbnail.png",
+      "email": "Natalia@example.com",
+      "password": "Aa123@#!"
+    },
+    {
+      "id": "AAeFhjK+",
+      "name": "José luis",
+      "username": "jose",
+      "img": "https://w7.pngwing.com/pngs/831/88/png-transparent-user-profile-computer-icons-user-interface-mystique-miscellaneous-user-interface-design-smile-thumbnail.png",
+      "email": "joseluis@example.com",
+      "password": "Aa123@#!"
+    },
+    {
+      "name": "Micaela",
+      "username": "mica",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSy_JmafxKbli9Es5QUvL6d-qIdOd5RmExsvA&usqp=CAU",
+      "email": "mica@example.com",
+      "password": "pompe123",
+      "id": "tOO0GsU"
+    },
+    {
+      "name": "Lucas",
+      "username": "lukassaas",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSy_JmafxKbli9Es5QUvL6d-qIdOd5RmExsvA&usqp=CAU",
+      "email": "lucasfbussolotti@gmail.com",
+      "password": "pompe123",
+      "id": "w2I649i"
+    },
+    {
+      "name": "asdsad",
+      "username": "asdas",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSy_JmafxKbli9Es5QUvL6d-qIdOd5RmExsvA&usqp=CAU",
+      "email": "followercs@hotmail.com",
+      "password": "asdasd",
+      "id": "w51LtuX"
+    }
+  ]
 }

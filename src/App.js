@@ -1,5 +1,4 @@
 import './App.css';
-import Loading from './components/Loading/Loading';
 import React from "react";
 import {Route, Routes, Navigate} from "react-router-dom";
 import NavBar from "./components/NavBar/NavBar";

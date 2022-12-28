@@ -14,5 +14,10 @@ export class UserService{
         let dataURL = `${this.serverURL}/users/${userId}`;
         return axios.get(dataURL);
     }
+
+    static createUser(user){
+        let dataURL = `${this.serverURL}/users`;
+        return axios.post(dataURL, user);
+    }
 };
 
