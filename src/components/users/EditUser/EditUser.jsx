@@ -1,7 +1,71 @@
-import React from "react"
-import { Link } from "react-router-dom";
+import React, {useState, useEffect} from "react"
+import { Link, useParams, useNavigate  } from "react-router-dom";
+import { UserService } from "../../../services/UserService";
 
 let EditUser = () =>{
+
+    let {userId} = useParams();
+    let navigate = useNavigate();
+
+    let [state, setState] = useState({
+        loading: false,
+        user: {
+            name: "",
+            username: "",
+            img: "",
+            email: "",
+            password: ""
+        },
+        errorMessage: ""
+    });
+
+    useEffect(() => {
+        async function handleResp(){ 
+        try{
+            setState({...state, loading:true});
+            let response = await UserService.getUser(userId);
+            setState({
+                ...state,
+                loading: false,
+                user: response.data
+            });
+        }
+        catch (error){
+            setState({
+                ...state,
+                loading: false,
+                errorMessage: error.message
+            });
+        }}
+        handleResp();
+    }, [userId]);
+
+    let updateInput = (event) =>{
+        setState({
+            ...state,
+            user:{
+                ...state.user,
+                [event.target.name] : event.target.value
+            }
+        });
+    };
+
+    let submitForm = async (event) =>{
+        event.preventDefault();
+        try{
+            let response = await UserService.updateUser(state.user, userId);
+            if(response){
+                navigate("/users/list", { replace: true });
+            }
+        }
+        catch (error) {
+            setState({...state, errorMessage: error.errorMessage});
+            navigate(`/users/edit/${userId}`, { replace: false });
+        } 
+    };
+    
+    let{loading, user, errorMessage} = state;
+
     return(
         <React.Fragment>
             <section className="add-user p-3">
@@ -13,21 +77,46 @@ let EditUser = () =>{
                     </div>
                     <div className="row">
                         <div className="col-md-4">
-                            <form>
+                            <form onSubmit={submitForm}>
                                 <div className="mb-2">
-                                    <input type="text" className="form-control" placeholder="Name"/>
+                                    <input
+                                        required = {true} 
+                                        name= "name"
+                                        value={user.name}
+                                        onChange= {updateInput}
+                                        type="text" className="form-control" placeholder="Name"/>
                                 </div>
                                 <div className="mb-2">
-                                    <input type="text" className="form-control" placeholder="Username"/>
+                                    <input 
+                                        required = {true} 
+                                        name= "username"
+                                        value={user.username}
+                                        onChange= {updateInput}
+                                        type="text" className="form-control" placeholder="Username"/>
                                 </div>
                                 <div className="mb-2">
-                                    <input type="text" className="form-control" placeholder="Url img"/>
+                                    <input 
+                                        required = {true} 
+                                        name= "img"
+                                        value={user.img}
+                                        onChange= {updateInput}
+                                        type="text" className="form-control" placeholder="Url img"/>
                                 </div>
                                 <div className="mb-2">
-                                    <input type="email" className="form-control" placeholder="Email"/>
+                                    <input 
+                                        required = {true} 
+                                        name= "email"
+                                        value={user.email}
+                                        onChange= {updateInput}
+                                        type="email" className="form-control" placeholder="Email"/>
                                 </div>
                                 <div className="mb-2">
-                                    <input type="text,number" className="form-control" placeholder="Password"/>
+                                    <input 
+                                        required = {true} 
+                                        name= "password"
+                                        value={user.password}
+                                        onChange= {updateInput}
+                                        type="text,number" className="form-control" placeholder="Password"/>
                                 </div>
                                 <div className="mb-2">
                                     <input type="submit" className="btn btn-primary" value="Update"/>
@@ -36,7 +125,7 @@ let EditUser = () =>{
                             </form>
                         </div>
                         <div className="col-md-6">
-                            <img src="https://png.pngitem.com/pimgs/s/130-1300253_female-user-icon-png-download-user-image-color.png" className="user-img"/>
+                            <img src= {user.img} className="user-img"/>
                         </div>
                     </div>
                 </div>

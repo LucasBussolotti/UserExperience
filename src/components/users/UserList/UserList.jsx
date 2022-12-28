@@ -79,7 +79,7 @@ let UserList = () =>{
                                         <Link to={`/users/view/${user.id}`} className="btn btn-warning mx-1">
                                         <i className="fa fa-eye"/>
                                         </Link>
-                                        <Link to={`/users/edit/:userId`} className="btn btn-primary mx-1">
+                                        <Link to={`/users/edit/${user.id}`} className="btn btn-primary mx-1">
                                         <i className="fa fa-pen"/>
                                         </Link>
                                         <button className="btn btn-danger mx-1">

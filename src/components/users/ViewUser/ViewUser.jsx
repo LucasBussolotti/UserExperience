@@ -30,9 +30,9 @@ let ViewUser = () =>{
                 loading:false,
                 errorMessage: error.message
             });
-        }
+        }}
         handleResp();
-    }}, [userId]);
+    }, [userId]);
 
     let {loading, user,} = state;
     return(
