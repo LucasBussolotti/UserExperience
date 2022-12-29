@@ -52,7 +52,7 @@ let AddUser = () =>{
                 <div className="container">
                     <div className="row">
                         <div className="col">
-                            <p className="h3 text-success fw-bold">Add User</p>
+                            <p className="h3 text-black fw-bold">Add User</p>
                         </div>
                     </div>
                     <div className="row">

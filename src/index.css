@@ -1,5 +1,6 @@
 body{
     background-color: #b2c4dd !important;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 .formulario{
     background-color: #b2c4dd !important;
@@ -7,7 +8,13 @@ body{
 .user-img{
     width: 200px;
     height: 200px;
+    border: 3px solid white;
     border-radius: 50%;
+}
+
+.color-card-2{
+    background-color: #b2c4dd !important;
+    border: none !important;
 }
 
 .color-card{
@@ -24,4 +31,10 @@ body{
     list-style: none;
     align-items: center;
     margin-top: 10px;
+    
+}
+
+.formulario{
+    margin-left: 30%;
+    margin-top: 10%;
 }

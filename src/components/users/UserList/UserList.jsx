@@ -88,7 +88,7 @@ let UserList = () =>{
     return(
         <React.Fragment>
             <section>
-                <div className= "row mx-5 my-5">
+                <div className= "row mx-5">
                     <div className="col-md-6">
                         <form className="formulario "> 
                             <div className= "mb-2 ">
@@ -113,7 +113,7 @@ let UserList = () =>{
                             filteredUsers.map(user=>{
                                 return(
                                     <div className="col-md-3 my-2 alig-items-center d-flex" key={user.id}>
-                                        <div className="card ">
+                                        <div className="card color-card-2">
                                             <div className="card-body color-card">
                                                 <div className="row align-items-center d-flex justify-content-center">
                                                     <img src= {user.img} alt="" className="user-img"/>
