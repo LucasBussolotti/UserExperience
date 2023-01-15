@@ -8,7 +8,7 @@ import EditUser from './components/users/EditUser/EditUser';
 import LoginForm from "./components/users/Login/Login"
 
 
-
+///Realizamos el Routeo de la app usando Routes, Route y Navigate para la raiz.
 let  App = () => {
   return (
     <React.Fragment>

@@ -103,12 +103,15 @@ let UserList = () =>{
                     </div>
                 </div>
             </section>
-                {
+                { ///Si loading está aparce <Loading/>, de no ser asi React.Fragment con el UI de la card.
                     loading ? <Loading/> : <React.Fragment>
                         <section className="users-list">
                 <div className="container">
                     <div className="row">
-                        {
+                        
+                        { ///Aplicamos lógica para que la cantidad de Cards que aparezcan sea igual al numero de objetos de la base de datos.
+                            ///Asignamos un ID a cada usuario por medio de "key"
+                            ///Completamos los datos de los usuarios de modo que aplique la base de datos.
                             filteredUsers.length > 0 &&
                             filteredUsers.map(user=>{
                                 return(
@@ -130,7 +133,7 @@ let UserList = () =>{
                                                             Username: <span className="fw-bold">{user.username}</span>
                                                         </li>
                                                     </ul>
-                                                </div>
+                                                </div> 
                                     <div className="d-flex align-items-center justify-content-center">
                                         <Link to={`/users/edit/${user.id}`} className="btn btn-primary mx-1">
                                         <i className="fa fa-pen"/>

@@ -4,8 +4,8 @@ import { UserService } from "../../../services/UserService";
 
 let EditUser = () =>{
 
-    let {userId} = useParams();
-    let navigate = useNavigate();
+    let {userId} = useParams(); ///Usamos Params para sacar los parametros del user por medio del ID
+    let navigate = useNavigate(); ///Usaremos useNavigate para establecer la ruta posteriormente.
 
     let [state, setState] = useState({
         loading: false,
